@@ -16,3 +16,27 @@ header .list ul {
     list-style: none;
     text-decoration: none;
 }
+
+/* Firstview */
+.firstview {
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    background-image: url("../images/firstview-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.firstview-bg {
+    position: absolute;
+    height: 60vh;
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+    z-index: 8;
+}
+.firstview-titlearea {
+    position: relative;
+    z-index: 9;
+    top: 28%;
+    text-align: center;
+}
