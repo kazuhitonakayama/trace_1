@@ -137,15 +137,25 @@ section.news {
     font-size: 0.3em;
 }
 .service-contentarea {
-    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .service-contentarea_card {
     width: 30%;
+    position: relative;
 }
 .service-contentarea_card img {
     width: 100%;
     height: 200px;
+    transition: .5s;
+}
+.service-contentarea_card img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+.img-hover-bg {
+    width: 100%;
+    height: 200px;
+    background: rgba(167, 13, 13, 0.5);
 }
