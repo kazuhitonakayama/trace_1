@@ -4,17 +4,41 @@
 }
 
 header {
-    background: #000000;
-    color: #fff;
+    background: #fff;
+    color: #000;
     height: 50px;
+    font-weight: bold;
     width: 100%;
     display: flex;
+    font-size: 0.7em;
     justify-content: space-between;
+}
+header .logoarea {
+    width: 150px;
+}
+header .logoarea h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
 }
 header .list ul {
     display: flex;
     list-style: none;
     text-decoration: none;
+    height: 50px;
+}
+header .list ul li {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+header .list ul li:last-child {
+    background: #31d0ee;
+    margin: 0;
+    color: #fff;
+    padding: 0px 20px;
+    font-weight:bold;
 }
 
 /* Firstview */
@@ -39,4 +63,51 @@ header .list ul {
     z-index: 9;
     top: 28%;
     text-align: center;
+}
+
+/* section news */
+section.news {
+    background: #edfcff;
+    height: 130px;
+}
+.newstextarea {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    height: 130px;
+    color: #8e9597;
+}
+.newstextarea-title {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+.newstextarea-title-p {
+    transform: translate(0%, -25%);
+    color: #0b99dd;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.newstextarea-title-p::after {
+    content: '一覧を見る  >';
+    display: block;
+    color: #8e9597;
+    font-weight: 100;
+    font-size: 0.1em;
+}
+.newstextarea-lists {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    width: 85%;
+}
+.newstextarea-lists ul {
+    width: 100%;
+}
+.newstextarea-lists ul li {
+    list-style: none;
+    font-size: 0.7em;
+    border-bottom: 1px solid #bcebfe;
+    margin: 5px 0px;
+    padding: 3px 0px;
 }
