@@ -111,3 +111,12 @@ section.news {
     margin: 5px 0px;
     padding: 3px 0px;
 }
+.cat {
+    background-color: #0b9adf;
+    color: #fff;
+    display: inline-block;
+    width: 70px;
+    height: 17px;
+    text-align: center;
+    margin: 0px 20px;
+}
