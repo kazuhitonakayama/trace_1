@@ -169,3 +169,40 @@ section.news {
     height: 200px;
     background: rgba(167, 13, 13, 0.5);
 }
+
+@media screen and (max-width: 768px) {
+    .newstextarea {
+        flex-direction: column;
+        height: unset;
+        padding: 40px 0px;
+        width: 90%;
+    }
+    section.news {
+        height: 50vh;
+    }
+    .newstextarea-title {
+        width: unset;
+    }
+    .newstextarea-lists {
+        height: unset;
+        width: 100%;
+    }
+    .newstextarea-title-p {
+        transform: unset;
+        width: 100%;
+        text-align: center;
+    }
+    .newstextarea-lists ul li {
+        margin: 20px 0px;
+    }
+    .br {
+        display: block;
+    }
+    .service-contentarea_card {
+        width: 100%;
+        margin: 40px 0px;
+    }
+    .service {
+        width: 90%;
+    }
+}
