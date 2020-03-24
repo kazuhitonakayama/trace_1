@@ -12,6 +12,8 @@ header {
     display: flex;
     font-size: 0.7em;
     justify-content: space-between;
+    position: fixed;
+    z-index: 500;
 }
 header .logoarea {
     width: 150px;
@@ -170,7 +172,104 @@ section.news {
     background: rgba(167, 13, 13, 0.5);
 }
 
+/* PC-hamburger start */
+.hamburger,
+.black-bg {
+    display: none;
+}
+/* PC-hamburger fin */
+
 @media screen and (max-width: 768px) {
+    /* sp-hamburger start */
+    .hamburger,
+    .black-bg {
+        display: block;
+    }
+    header .list ul {
+        height: unset;
+        margin: 20%;
+    }
+    header .list ul li {
+        margin: 20% 0px;
+    }
+    header .list ul li:last-child {
+        background: none;
+        color: #0b9bde;
+    }
+    .list {
+        position: fixed;
+        right: -60%;
+        width: 60%;
+        height: 100vh; /* ハンバーガーの大きな要素を高さ100%に */
+        background-color: #fff; /* ハンバーガーの背景を白に */
+        transition: all .6s; /* 動作の際にぬるっと動くように */
+        z-index: 200; /* body要素の上に来るように設定 */
+        overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+    }
+    .hamburger {
+        position: absolute;
+        right: 0;
+        top: 0;      /* ハンバーガメニューを右上に設置する */
+        width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
+        height: 50px; /* クリックしやすいようにちゃんと高さを指定する */
+        cursor: pointer;
+        z-index: 300; /* ハンバーガーメニューより上に来るようにする */
+    }
+    header .list ul {
+        display: block; /* ハンバーガーのリストを縦にする */
+    }
+    .hamburger__line {
+        position: absolute;
+        left: 11px;
+        width: 18px;
+        height: 2px;
+        border-radius: 10px;
+        background-color: #111;
+        transition: all .6s;
+    }
+    .hamburger__line--1 {
+        top: 19px;
+    }
+    .hamburger__line--2 {
+        top: 25px;
+    }
+    .hamburger__line--3 {
+        top: 31px;
+    }
+    .black-bg {  /* 一旦、普通のbodyの時は、black-bgは不可視にする */
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        background-color: #000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .6s;
+        cursor: pointer;
+    }
+    /* 表示された時用のCSS */
+    .nav-open .list {
+        right: 0;
+    }
+    .nav-open .black-bg {
+        opacity: .8;
+        visibility: visible;
+    }
+    .nav-open .hamburger__line--1 {
+        transform: rotate(225deg);
+        top: 24px;
+    }
+    .nav-open .hamburger__line--2 {
+        width: 0;
+        left: 50%;
+    }
+    .nav-open .hamburger__line--3 {
+        transform: rotate(-225deg);
+        top: 24px;
+    }
+    /* sp-hamburger fin */
     .newstextarea {
         flex-direction: column;
         height: unset;

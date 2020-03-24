@@ -4,23 +4,33 @@
     <title>Corporate Cite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./stylesheet/homepage.css">
+    <!-- <script type="text/javascript" src="./js/hamburger.js"></script> -->
   </head>
   <body>
       <header>
-          <div class="logoarea">
-              <h2>ロゴ</h2>
-          </div>
-          <div class="list">
-              <ul>
-                  <li>サービス</li>
-                  <li>ニュース</li>
-                  <li>CSR</li>
-                  <li>IR情報</li>
-                  <li>会社情報</li>
-                  <li>採用情報</li>
-                  <li>お問い合わせ</li>
-              </ul>
-          </div>
+            <div class="logoarea">
+                <h2>ロゴ</h2>
+            </div>
+            <!-- <div class="gloval-nav"></div> -->
+            <div class="list">
+                <!-- <ul class="global-nav__list"></ul> -->
+                <ul>
+                    <!-- <li class="global-nav__item"></li> -->
+                    <li>サービス</li>
+                    <li>ニュース</li>
+                    <li>CSR</li>
+                    <li>IR情報</li>
+                    <li>会社情報</li>
+                    <li>採用情報</li>
+                    <li>お問い合わせ</li>
+                </ul>
+            </div>
+            <div class="hamburger" id="js-hamburger">
+                <span class="hamburger__line hamburger__line--1"></span>
+                <span class="hamburger__line hamburger__line--2"></span>
+                <span class="hamburger__line hamburger__line--3"></span>
+            </div>
+            <div class="black-bg" id="js-black-bg"></div>
       </header>
       <section class="firstview">
           <!-- <div class="firstview-bg"></div> -->
@@ -60,5 +70,22 @@
               </div>
           </div>
       </section>
+      <script>
+        function toggleNav() {
+            var body = document.body;
+            var hamburger = document.getElementById('js-hamburger');
+            var blackBg = document.getElementById('js-black-bg');
+          
+            // js-hamburgerをクリックするとbodyに[nav-open]というクラスを付与する
+            hamburger.addEventListener('click', function() {
+              body.classList.toggle('nav-open');
+            });
+            // js-black-bgをクリックするとbodyに[nav-open]というクラスを付与する
+            blackBg.addEventListener('click', function() {
+              body.classList.remove('nav-open');
+            });
+        }
+        toggleNav();
+      </script>
   </body>
 </html>
